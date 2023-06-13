@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "TestGrpc";
+
+package car;
+
+// The car service definition.
+service Cars {
+  // Sends a car recommendation
+  rpc GetCar (CarRequest) returns (CarReply);
+}
+
+// The request message containing the car's id.
+message CarRequest {
+  int32 Id = 1;
+}
+
+// The response message containing the car information.
+message CarReply {
+  string Make = 1;
+  string Model = 2;
+}
