@@ -12,5 +12,5 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-preview
 WORKDIR /App
 COPY --from=build-env /App/out .
-EXPOSE 5052
+EXPOSE 8080
 ENTRYPOINT ["dotnet", "TestGrpc.dll"]
