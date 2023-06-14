@@ -26,7 +26,8 @@ public class CarsService : Cars.CarsBase
         } else {
             return Task.FromResult(new CarReply
             {
-
+                Make = "not",
+                Model = "found"
             });
         }
     }
